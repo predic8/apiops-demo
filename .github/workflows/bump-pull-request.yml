@@ -1,0 +1,28 @@
+
+name: Check & deploy API documentation
+permissions:
+  contents: read
+  pull-requests: write
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  api-diff:
+    name: Check API diff on Bump.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Comment pull request with API diff
+        uses: bump-sh/github-action@v1
+        with:
+          doc: partner
+          token: 9hnFQb4ay1ABwppTmnUSLptGqYxUMmMt
+          file: partner-v1.1.yml
+          command: diff
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+
+    
