@@ -19,6 +19,7 @@ paths:
                 name:
                   type: string
                   example: Max Maier
+                  minLength: 5
                 year:
                   type: integer
                   minimum: 18
