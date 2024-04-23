@@ -19,6 +19,9 @@ paths:
                 name:
                   type: string
                   example: Max Maier
+                year:
+                  type: integer
+                  minimum: 18
       responses:
         '201':
           description: Created 
