@@ -1,9 +1,9 @@
 openapi: '3.0.3'
 info:
-  title: Partner API
-  version: '1.0'
+  title: The Partner API
+  version: '1.1'
 servers:
-  - url: https://api.predic8.de/v1
+  - url: https://api.predic8.de/partner/v1
 paths:
   /partners:
     post:
@@ -22,6 +22,7 @@ paths:
                 year:
                   type: integer
                   minimum: 18
+                  maximum: 99
       responses:
         '201':
           description: Created 
